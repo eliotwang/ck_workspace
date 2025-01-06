@@ -1,0 +1,697 @@
+Omniperf version: 2.1.0
+Profiler choice: rocprofv2
+Path: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300
+Target: MI300
+Command: ./bin/tile_example_multihead_attention -v=1 -prec=fp16 -nidx=500 -b=1 -a_seq=200 -seq=200 -nhead=8 -hsize=16 -b1_hsize=8 -init=u -seed=123 -perf=1 -maskmax=5 -qmaskmax=10
+Kernel Selection: None
+Dispatch Selection: None
+Hardware Blocks: All
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Collecting Performance Counters
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/SQ_IFETCH_LEVEL.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_WAVES
+   |-> [rocprofv2] - SQ_IFETCH
+   |-> [rocprofv2] - SQ_IFETCH_LEVEL
+   |-> [rocprofv2] - SQ_ACCUM_PREV_HIRES
+   |-> [rocprofv2] - SQC_TC_DATA_READ_REQ
+   |-> [rocprofv2] - SQC_TC_DATA_WRITE_REQ
+   |-> [rocprofv2] - SQC_TC_DATA_ATOMIC_REQ
+   |-> [rocprofv2] - SQC_TC_STALL
+   |-> [rocprofv2] - TA_BUFFER_READ_WAVEFRONTS_sum
+   |-> [rocprofv2] - TA_BUFFER_WRITE_WAVEFRONTS_sum
+   |-> [rocprofv2] - TD_SPI_STALL_sum
+   |-> [rocprofv2] - TD_LOAD_WAVEFRONT_sum
+   |-> [rocprofv2] - TCP_READ_TAGCONFLICT_STALL_CYCLES_sum
+   |-> [rocprofv2] - TCP_WRITE_TAGCONFLICT_STALL_CYCLES_sum
+   |-> [rocprofv2] - TCP_ATOMIC_TAGCONFLICT_STALL_CYCLES_sum
+   |-> [rocprofv2] - TCP_TA_TCP_STATE_READ_sum
+   |-> [rocprofv2] - TCC_NC_REQ_sum
+   |-> [rocprofv2] - TCC_UC_REQ_sum
+   |-> [rocprofv2] - TCC_CC_REQ_sum
+   |-> [rocprofv2] - TCC_RW_REQ_sum
+   |-> [rocprofv2] - CPC_CPC_STAT_IDLE
+   |-> [rocprofv2] - CPC_CPC_TCIU_BUSY
+   |-> [rocprofv2] - CPF_CPF_TCIU_BUSY
+   |-> [rocprofv2] - CPF_CPF_TCIU_STALL
+   |-> [rocprofv2] - SPI_CSN_NUM_THREADGROUPS
+   |-> [rocprofv2] - SPI_CSN_WAVE
+   |-> [rocprofv2] - GRBM_COUNT
+   |-> [rocprofv2] - GRBM_GUI_ACTIVE
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1982.17 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1091056.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/SQ_INST_LEVEL_LDS.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_LDS
+   |-> [rocprofv2] - SQ_INST_LEVEL_LDS
+   |-> [rocprofv2] - SQ_ACCUM_PREV_HIRES
+   |-> [rocprofv2] - SQC_DCACHE_HITS
+   |-> [rocprofv2] - SQC_DCACHE_MISSES
+   |-> [rocprofv2] - SQC_DCACHE_MISSES_DUPLICATE
+   |-> [rocprofv2] - SQC_DCACHE_REQ_READ_1
+   |-> [rocprofv2] - SQC_DCACHE_REQ_READ_2
+   |-> [rocprofv2] - TA_ADDR_STALLED_BY_TC_CYCLES_sum
+   |-> [rocprofv2] - TA_TOTAL_WAVEFRONTS_sum
+   |-> [rocprofv2] - TCP_UTCL1_TRANSLATION_MISS_sum
+   |-> [rocprofv2] - TCP_UTCL1_TRANSLATION_HIT_sum
+   |-> [rocprofv2] - TCP_UTCL1_PERMISSION_MISS_sum
+   |-> [rocprofv2] - TCP_UTCL1_REQUEST_sum
+   |-> [rocprofv2] - TCC_EA0_WRREQ_sum
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B_sum
+   |-> [rocprofv2] - TCC_EA0_WR_UNCACHED_32B_sum
+   |-> [rocprofv2] - TCC_EA0_WRREQ_DRAM_sum
+   |-> [rocprofv2] - CPC_CPC_UTCL2IU_IDLE
+   |-> [rocprofv2] - CPC_CPC_UTCL2IU_STALL
+   |-> [rocprofv2] - SPI_RA_WAVE_SIMD_FULL_CSN
+   |-> [rocprofv2] - SPI_RA_VGPR_SIMD_FULL_CSN
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1672.18 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1091226.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/SQ_INST_LEVEL_SMEM.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_SMEM
+   |-> [rocprofv2] - SQ_INST_LEVEL_SMEM
+   |-> [rocprofv2] - SQ_ACCUM_PREV_HIRES
+   |-> [rocprofv2] - SQC_TC_REQ
+   |-> [rocprofv2] - SQC_DCACHE_REQ_READ_16
+   |-> [rocprofv2] - SQC_ICACHE_REQ
+   |-> [rocprofv2] - SQC_ICACHE_HITS
+   |-> [rocprofv2] - SQC_ICACHE_MISSES
+   |-> [rocprofv2] - TA_BUFFER_ATOMIC_WAVEFRONTS_sum
+   |-> [rocprofv2] - TA_BUFFER_TOTAL_CYCLES_sum
+   |-> [rocprofv2] - TD_ATOMIC_WAVEFRONT_sum
+   |-> [rocprofv2] - TD_STORE_WAVEFRONT_sum
+   |-> [rocprofv2] - TCP_VOLATILE_sum
+   |-> [rocprofv2] - TCP_TOTAL_ACCESSES_sum
+   |-> [rocprofv2] - TCP_TOTAL_READ_sum
+   |-> [rocprofv2] - TCP_TOTAL_WRITE_sum
+   |-> [rocprofv2] - TCC_REQ_sum
+   |-> [rocprofv2] - TCC_STREAMING_REQ_sum
+   |-> [rocprofv2] - TCC_HIT_sum
+   |-> [rocprofv2] - TCC_MISS_sum
+   |-> [rocprofv2] - CPC_CPC_TCIU_IDLE
+   |-> [rocprofv2] - CPC_CPC_STAT_STALL
+   |-> [rocprofv2] - CPF_CPF_STAT_IDLE
+   |-> [rocprofv2] - CPF_CPF_TCIU_IDLE
+   |-> [rocprofv2] - SPI_RA_REQ_NO_ALLOC
+   |-> [rocprofv2] - SPI_RA_REQ_NO_ALLOC_CSN
+   |-> [rocprofv2] - GRBM_SPI_BUSY
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1709.87 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1091383.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/SQ_INST_LEVEL_VMEM.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_VMEM
+   |-> [rocprofv2] - SQ_INST_LEVEL_VMEM
+   |-> [rocprofv2] - SQ_ACCUM_PREV_HIRES
+   |-> [rocprofv2] - SQC_ICACHE_MISSES_DUPLICATE
+   |-> [rocprofv2] - SQC_DCACHE_INPUT_VALID_READYB
+   |-> [rocprofv2] - SQC_DCACHE_ATOMIC
+   |-> [rocprofv2] - SQC_DCACHE_REQ_READ_8
+   |-> [rocprofv2] - SQC_DCACHE_REQ
+   |-> [rocprofv2] - TA_BUFFER_COALESCED_READ_CYCLES_sum
+   |-> [rocprofv2] - TA_BUFFER_COALESCED_WRITE_CYCLES_sum
+   |-> [rocprofv2] - TD_COALESCABLE_WAVEFRONT_sum
+   |-> [rocprofv2] - TCP_TOTAL_ATOMIC_WITH_RET_sum
+   |-> [rocprofv2] - TCP_TOTAL_ATOMIC_WITHOUT_RET_sum
+   |-> [rocprofv2] - TCP_TOTAL_WRITEBACK_INVALIDATES_sum
+   |-> [rocprofv2] - TCP_TOTAL_CACHE_ACCESSES_sum
+   |-> [rocprofv2] - TCC_READ_sum
+   |-> [rocprofv2] - TCC_WRITE_sum
+   |-> [rocprofv2] - TCC_ATOMIC_sum
+   |-> [rocprofv2] - TCC_WRITEBACK_sum
+   |-> [rocprofv2] - CPC_UTCL1_STALL_ON_TRANSLATION
+   |-> [rocprofv2] - CPC_CPC_UTCL2IU_BUSY
+   |-> [rocprofv2] - CPF_CMP_UTCL1_STALL_ON_TRANSLATION
+   |-> [rocprofv2] - SPI_RA_RES_STALL_CSN
+   |-> [rocprofv2] - SPI_RA_TMP_STALL_CSN
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1711.73 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1091544.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/SQ_LEVEL_WAVES.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_CYCLES
+   |-> [rocprofv2] - SQ_WAVES
+   |-> [rocprofv2] - SQ_WAVE_CYCLES
+   |-> [rocprofv2] - SQ_BUSY_CYCLES
+   |-> [rocprofv2] - SQ_LEVEL_WAVES
+   |-> [rocprofv2] - SQ_ACCUM_PREV_HIRES
+   |-> [rocprofv2] - SQ_BUSY_CU_CYCLES
+   |-> [rocprofv2] - SQC_TC_INST_REQ
+   |-> [rocprofv2] - TA_TA_BUSY_sum
+   |-> [rocprofv2] - TA_BUFFER_WAVEFRONTS_sum
+   |-> [rocprofv2] - TD_TD_BUSY_sum
+   |-> [rocprofv2] - TD_TC_STALL_sum
+   |-> [rocprofv2] - TCP_GATE_EN1_sum
+   |-> [rocprofv2] - TCP_GATE_EN2_sum
+   |-> [rocprofv2] - TCP_TD_TCP_STALL_CYCLES_sum
+   |-> [rocprofv2] - TCP_TCR_TCP_STALL_CYCLES_sum
+   |-> [rocprofv2] - TCC_CYCLE_sum
+   |-> [rocprofv2] - TCC_BUSY_sum
+   |-> [rocprofv2] - TCC_PROBE_sum
+   |-> [rocprofv2] - TCC_PROBE_ALL_sum
+   |-> [rocprofv2] - CPC_ME1_BUSY_FOR_PACKET_DECODE
+   |-> [rocprofv2] - CPC_CPC_STAT_BUSY
+   |-> [rocprofv2] - CPF_CPF_STAT_BUSY
+   |-> [rocprofv2] - CPF_CPF_STAT_STALL
+   |-> [rocprofv2] - SPI_CSN_WINDOW_VALID
+   |-> [rocprofv2] - SPI_CSN_BUSY
+   |-> [rocprofv2] - GRBM_COUNT
+   |-> [rocprofv2] - GRBM_GUI_ACTIVE
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1791.74 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1091704.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_0.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQC_DCACHE_REQ_READ_4
+   |-> [rocprofv2] - SQ_INSTS_VALU_CVT
+   |-> [rocprofv2] - SQ_INSTS_VMEM_WR
+   |-> [rocprofv2] - SQ_INSTS_VMEM_RD
+   |-> [rocprofv2] - SQ_INSTS_SALU
+   |-> [rocprofv2] - SQ_INSTS_VSKIPPED
+   |-> [rocprofv2] - SQ_INSTS
+   |-> [rocprofv2] - SQ_INSTS_VALU
+   |-> [rocprofv2] - TA_ADDR_STALLED_BY_TD_CYCLES_sum
+   |-> [rocprofv2] - TA_DATA_STALLED_BY_TC_CYCLES_sum
+   |-> [rocprofv2] - TCP_TCC_READ_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_WRITE_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_ATOMIC_WITH_RET_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_ATOMIC_WITHOUT_RET_REQ_sum
+   |-> [rocprofv2] - TCC_EA0_RDREQ_sum
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B_sum
+   |-> [rocprofv2] - TCC_BUBBLE_sum
+   |-> [rocprofv2] - TCC_EA0_RD_UNCACHED_32B_sum
+   |-> [rocprofv2] - CPC_ME1_DC0_SPI_BUSY
+   |-> [rocprofv2] - SPI_RA_SGPR_SIMD_FULL_CSN
+   |-> [rocprofv2] - SPI_RA_LDS_CU_FULL_CSN
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1647.42 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1091868.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_1.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_VALU_ADD_F16
+   |-> [rocprofv2] - SQ_INSTS_VALU_MUL_F16
+   |-> [rocprofv2] - SQ_INSTS_VALU_FMA_F16
+   |-> [rocprofv2] - SQ_INSTS_VALU_TRANS_F16
+   |-> [rocprofv2] - SQ_INSTS_VALU_ADD_F32
+   |-> [rocprofv2] - SQ_INSTS_VALU_MUL_F32
+   |-> [rocprofv2] - SQ_INSTS_VALU_FMA_F32
+   |-> [rocprofv2] - SQ_INSTS_VALU_TRANS_F32
+   |-> [rocprofv2] - TA_FLAT_WAVEFRONTS_sum
+   |-> [rocprofv2] - TA_FLAT_READ_WAVEFRONTS_sum
+   |-> [rocprofv2] - TCP_TCC_NC_READ_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_NC_WRITE_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_NC_ATOMIC_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_UC_READ_REQ_sum
+   |-> [rocprofv2] - TCC_EA0_RDREQ_DRAM_sum
+   |-> [rocprofv2] - TCC_TAG_STALL_sum
+   |-> [rocprofv2] - TCC_NORMAL_WRITEBACK_sum
+   |-> [rocprofv2] - TCC_ALL_TC_OP_WB_WRITEBACK_sum
+   |-> [rocprofv2] - SPI_RA_BAR_CU_FULL_CSN
+   |-> [rocprofv2] - SPI_RA_TGLIM_CU_FULL_CSN
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1623.11 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092036.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_2.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_VALU_ADD_F64
+   |-> [rocprofv2] - SQ_INSTS_VALU_MUL_F64
+   |-> [rocprofv2] - SQ_INSTS_VALU_FMA_F64
+   |-> [rocprofv2] - SQ_INSTS_VALU_TRANS_F64
+   |-> [rocprofv2] - SQ_INSTS_VALU_INT32
+   |-> [rocprofv2] - SQ_INSTS_VALU_INT64
+   |-> [rocprofv2] - SQ_INSTS_FLAT
+   |-> [rocprofv2] - SQ_INSTS_GDS
+   |-> [rocprofv2] - TA_FLAT_WRITE_WAVEFRONTS_sum
+   |-> [rocprofv2] - TA_FLAT_ATOMIC_WAVEFRONTS_sum
+   |-> [rocprofv2] - TCP_TCC_UC_WRITE_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_UC_ATOMIC_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_CC_READ_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_CC_WRITE_REQ_sum
+   |-> [rocprofv2] - TCC_NORMAL_EVICT_sum
+   |-> [rocprofv2] - TCC_ALL_TC_OP_INV_EVICT_sum
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL_sum
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_sum
+   |-> [rocprofv2] - SPI_RA_WVLIM_STALL_CSN
+   |-> [rocprofv2] - SPI_SWC_CSC_WR
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1518.38 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092196.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_3.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_EXP_GDS
+   |-> [rocprofv2] - SQ_INSTS_BRANCH
+   |-> [rocprofv2] - SQ_INSTS_SENDMSG
+   |-> [rocprofv2] - SQ_WAIT_ANY
+   |-> [rocprofv2] - SQ_WAIT_INST_ANY
+   |-> [rocprofv2] - SQ_ACTIVE_INST_ANY
+   |-> [rocprofv2] - SQ_ACTIVE_INST_VMEM
+   |-> [rocprofv2] - SQ_ACTIVE_INST_LDS
+   |-> [rocprofv2] - TCP_TCC_CC_ATOMIC_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_RW_READ_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_RW_WRITE_REQ_sum
+   |-> [rocprofv2] - TCP_TCC_RW_ATOMIC_REQ_sum
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL_sum
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL_sum
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL_sum
+   |-> [rocprofv2] - TCC_EA0_WRREQ_STALL_sum
+   |-> [rocprofv2] - SPI_VWC_CSC_WR
+   |-> [rocprofv2] - SPI_RA_BULKY_CU_FULL_CSN
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1388.51 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092360.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_4.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_ACTIVE_INST_VALU
+   |-> [rocprofv2] - SQ_ACTIVE_INST_SCA
+   |-> [rocprofv2] - SQ_ACTIVE_INST_EXP_GDS
+   |-> [rocprofv2] - SQ_ACTIVE_INST_MISC
+   |-> [rocprofv2] - SQ_ACTIVE_INST_FLAT
+   |-> [rocprofv2] - SQ_INST_CYCLES_VMEM_WR
+   |-> [rocprofv2] - SQ_INST_CYCLES_VMEM_RD
+   |-> [rocprofv2] - SQ_INST_CYCLES_SMEM
+   |-> [rocprofv2] - TCP_PENDING_STALL_CYCLES_sum
+   |-> [rocprofv2] - TCC_CYCLE[0]
+   |-> [rocprofv2] - TCC_RW_REQ[0]
+   |-> [rocprofv2] - TCC_HIT[0]
+   |-> [rocprofv2] - TCC_MISS[0]
+   |-> [rocprofv2] - TCC_CYCLE[1]
+   |-> [rocprofv2] - TCC_RW_REQ[1]
+   |-> [rocprofv2] - TCC_HIT[1]
+   |-> [rocprofv2] - TCC_MISS[1]
+   |-> [rocprofv2] - TCC_CYCLE[2]
+   |-> [rocprofv2] - TCC_RW_REQ[2]
+   |-> [rocprofv2] - TCC_HIT[2]
+   |-> [rocprofv2] - TCC_MISS[2]
+   |-> [rocprofv2] - TCC_CYCLE[3]
+   |-> [rocprofv2] - TCC_RW_REQ[3]
+   |-> [rocprofv2] - TCC_HIT[3]
+   |-> [rocprofv2] - TCC_MISS[3]
+   |-> [rocprofv2] - TCC_CYCLE[4]
+   |-> [rocprofv2] - TCC_RW_REQ[4]
+   |-> [rocprofv2] - TCC_HIT[4]
+   |-> [rocprofv2] - TCC_MISS[4]
+   |-> [rocprofv2] - TCC_CYCLE[5]
+   |-> [rocprofv2] - TCC_RW_REQ[5]
+   |-> [rocprofv2] - TCC_HIT[5]
+   |-> [rocprofv2] - TCC_MISS[5]
+   |-> [rocprofv2] - TCC_CYCLE[6]
+   |-> [rocprofv2] - TCC_RW_REQ[6]
+   |-> [rocprofv2] - TCC_HIT[6]
+   |-> [rocprofv2] - TCC_MISS[6]
+   |-> [rocprofv2] - TCC_CYCLE[7]
+   |-> [rocprofv2] - TCC_RW_REQ[7]
+   |-> [rocprofv2] - TCC_HIT[7]
+   |-> [rocprofv2] - TCC_MISS[7]
+   |-> [rocprofv2] - TCC_CYCLE[8]
+   |-> [rocprofv2] - TCC_RW_REQ[8]
+   |-> [rocprofv2] - TCC_HIT[8]
+   |-> [rocprofv2] - TCC_MISS[8]
+   |-> [rocprofv2] - TCC_CYCLE[9]
+   |-> [rocprofv2] - TCC_RW_REQ[9]
+   |-> [rocprofv2] - TCC_HIT[9]
+   |-> [rocprofv2] - TCC_MISS[9]
+   |-> [rocprofv2] - TCC_CYCLE[10]
+   |-> [rocprofv2] - TCC_RW_REQ[10]
+   |-> [rocprofv2] - TCC_HIT[10]
+   |-> [rocprofv2] - TCC_MISS[10]
+   |-> [rocprofv2] - TCC_CYCLE[11]
+   |-> [rocprofv2] - TCC_RW_REQ[11]
+   |-> [rocprofv2] - TCC_HIT[11]
+   |-> [rocprofv2] - TCC_MISS[11]
+   |-> [rocprofv2] - TCC_CYCLE[12]
+   |-> [rocprofv2] - TCC_RW_REQ[12]
+   |-> [rocprofv2] - TCC_HIT[12]
+   |-> [rocprofv2] - TCC_MISS[12]
+   |-> [rocprofv2] - TCC_CYCLE[13]
+   |-> [rocprofv2] - TCC_RW_REQ[13]
+   |-> [rocprofv2] - TCC_HIT[13]
+   |-> [rocprofv2] - TCC_MISS[13]
+   |-> [rocprofv2] - TCC_CYCLE[14]
+   |-> [rocprofv2] - TCC_RW_REQ[14]
+   |-> [rocprofv2] - TCC_HIT[14]
+   |-> [rocprofv2] - TCC_MISS[14]
+   |-> [rocprofv2] - TCC_CYCLE[15]
+   |-> [rocprofv2] - TCC_RW_REQ[15]
+   |-> [rocprofv2] - TCC_HIT[15]
+   |-> [rocprofv2] - TCC_MISS[15]
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 1307.66 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092517.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_5.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INST_CYCLES_SALU
+   |-> [rocprofv2] - SQ_THREAD_CYCLES_VALU
+   |-> [rocprofv2] - SQ_LDS_BANK_CONFLICT
+   |-> [rocprofv2] - SQ_LDS_ADDR_CONFLICT
+   |-> [rocprofv2] - SQ_LDS_UNALIGNED_STALL
+   |-> [rocprofv2] - SQ_WAVES_EQ_64
+   |-> [rocprofv2] - SQ_WAVES_LT_64
+   |-> [rocprofv2] - SQ_WAVES_LT_48
+   |-> [rocprofv2] - TCC_REQ[0]
+   |-> [rocprofv2] - TCC_READ[0]
+   |-> [rocprofv2] - TCC_WRITE[0]
+   |-> [rocprofv2] - TCC_ATOMIC[0]
+   |-> [rocprofv2] - TCC_REQ[1]
+   |-> [rocprofv2] - TCC_READ[1]
+   |-> [rocprofv2] - TCC_WRITE[1]
+   |-> [rocprofv2] - TCC_ATOMIC[1]
+   |-> [rocprofv2] - TCC_REQ[2]
+   |-> [rocprofv2] - TCC_READ[2]
+   |-> [rocprofv2] - TCC_WRITE[2]
+   |-> [rocprofv2] - TCC_ATOMIC[2]
+   |-> [rocprofv2] - TCC_REQ[3]
+   |-> [rocprofv2] - TCC_READ[3]
+   |-> [rocprofv2] - TCC_WRITE[3]
+   |-> [rocprofv2] - TCC_ATOMIC[3]
+   |-> [rocprofv2] - TCC_REQ[4]
+   |-> [rocprofv2] - TCC_READ[4]
+   |-> [rocprofv2] - TCC_WRITE[4]
+   |-> [rocprofv2] - TCC_ATOMIC[4]
+   |-> [rocprofv2] - TCC_REQ[5]
+   |-> [rocprofv2] - TCC_READ[5]
+   |-> [rocprofv2] - TCC_WRITE[5]
+   |-> [rocprofv2] - TCC_ATOMIC[5]
+   |-> [rocprofv2] - TCC_REQ[6]
+   |-> [rocprofv2] - TCC_READ[6]
+   |-> [rocprofv2] - TCC_WRITE[6]
+   |-> [rocprofv2] - TCC_ATOMIC[6]
+   |-> [rocprofv2] - TCC_REQ[7]
+   |-> [rocprofv2] - TCC_READ[7]
+   |-> [rocprofv2] - TCC_WRITE[7]
+   |-> [rocprofv2] - TCC_ATOMIC[7]
+   |-> [rocprofv2] - TCC_REQ[8]
+   |-> [rocprofv2] - TCC_READ[8]
+   |-> [rocprofv2] - TCC_WRITE[8]
+   |-> [rocprofv2] - TCC_ATOMIC[8]
+   |-> [rocprofv2] - TCC_REQ[9]
+   |-> [rocprofv2] - TCC_READ[9]
+   |-> [rocprofv2] - TCC_WRITE[9]
+   |-> [rocprofv2] - TCC_ATOMIC[9]
+   |-> [rocprofv2] - TCC_REQ[10]
+   |-> [rocprofv2] - TCC_READ[10]
+   |-> [rocprofv2] - TCC_WRITE[10]
+   |-> [rocprofv2] - TCC_ATOMIC[10]
+   |-> [rocprofv2] - TCC_REQ[11]
+   |-> [rocprofv2] - TCC_READ[11]
+   |-> [rocprofv2] - TCC_WRITE[11]
+   |-> [rocprofv2] - TCC_ATOMIC[11]
+   |-> [rocprofv2] - TCC_REQ[12]
+   |-> [rocprofv2] - TCC_READ[12]
+   |-> [rocprofv2] - TCC_WRITE[12]
+   |-> [rocprofv2] - TCC_ATOMIC[12]
+   |-> [rocprofv2] - TCC_REQ[13]
+   |-> [rocprofv2] - TCC_READ[13]
+   |-> [rocprofv2] - TCC_WRITE[13]
+   |-> [rocprofv2] - TCC_ATOMIC[13]
+   |-> [rocprofv2] - TCC_REQ[14]
+   |-> [rocprofv2] - TCC_READ[14]
+   |-> [rocprofv2] - TCC_WRITE[14]
+   |-> [rocprofv2] - TCC_ATOMIC[14]
+   |-> [rocprofv2] - TCC_REQ[15]
+   |-> [rocprofv2] - TCC_READ[15]
+   |-> [rocprofv2] - TCC_WRITE[15]
+   |-> [rocprofv2] - TCC_ATOMIC[15]
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 976.144 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092681.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_6.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_WAVES_LT_32
+   |-> [rocprofv2] - SQ_WAVES_LT_16
+   |-> [rocprofv2] - SQ_ITEMS
+   |-> [rocprofv2] - SQ_LDS_MEM_VIOLATIONS
+   |-> [rocprofv2] - SQ_LDS_ATOMIC_RETURN
+   |-> [rocprofv2] - SQ_LDS_IDX_ACTIVE
+   |-> [rocprofv2] - SQ_WAVES_RESTORED
+   |-> [rocprofv2] - SQ_WAVES_SAVED
+   |-> [rocprofv2] - TCC_EA0_RDREQ[0]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[0]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[0]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[0]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[1]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[1]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[1]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[1]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[2]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[2]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[2]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[2]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[3]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[3]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[3]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[3]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[4]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[4]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[4]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[4]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[5]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[5]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[5]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[5]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[6]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[6]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[6]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[6]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[7]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[7]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[7]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[7]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[8]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[8]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[8]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[8]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[9]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[9]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[9]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[9]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[10]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[10]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[10]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[10]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[11]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[11]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[11]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[11]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[12]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[12]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[12]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[12]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[13]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[13]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[13]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[13]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[14]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[14]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[14]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[14]
+   |-> [rocprofv2] - TCC_EA0_RDREQ[15]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_32B[15]
+   |-> [rocprofv2] - TCC_EA0_WRREQ[15]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_64B[15]
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 960.387 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092838.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_7.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_SMEM_NORM
+   |-> [rocprofv2] - SQ_INSTS_MFMA
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_I8
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_F16
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_BF16
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_F32
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_F64
+   |-> [rocprofv2] - SQ_VALU_MFMA_BUSY_CYCLES
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[0]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[0]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[0]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[0]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[1]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[1]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[1]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[1]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[2]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[2]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[2]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[2]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[3]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[3]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[3]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[3]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[4]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[4]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[4]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[4]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[5]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[5]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[5]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[5]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[6]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[6]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[6]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[6]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[7]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[7]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[7]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[7]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[8]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[8]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[8]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[8]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[9]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[9]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[9]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[9]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[10]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[10]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[10]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[10]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[11]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[11]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[11]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[11]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[12]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[12]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[12]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[12]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[13]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[13]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[13]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[13]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[14]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[14]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[14]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[14]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC[15]
+   |-> [rocprofv2] - TCC_EA0_RDREQ_LEVEL[15]
+   |-> [rocprofv2] - TCC_EA0_WRREQ_LEVEL[15]
+   |-> [rocprofv2] - TCC_EA0_ATOMIC_LEVEL[15]
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 970.88 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1092995.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/pmc_perf_8.txt
+   |-> [rocprofv2] ROCProfilerV2: Collecting the following counters:
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_MOPS_I8
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_MOPS_F16
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_MOPS_BF16
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_MOPS_F32
+   |-> [rocprofv2] - SQ_INSTS_VALU_MFMA_MOPS_F64
+   |-> [rocprofv2] - TCC_TAG_STALL[0]
+   |-> [rocprofv2] - TCC_BUBBLE[0]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[0]
+   |-> [rocprofv2] - TCC_TAG_STALL[1]
+   |-> [rocprofv2] - TCC_BUBBLE[1]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[1]
+   |-> [rocprofv2] - TCC_TAG_STALL[2]
+   |-> [rocprofv2] - TCC_BUBBLE[2]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[2]
+   |-> [rocprofv2] - TCC_TAG_STALL[3]
+   |-> [rocprofv2] - TCC_BUBBLE[3]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[3]
+   |-> [rocprofv2] - TCC_TAG_STALL[4]
+   |-> [rocprofv2] - TCC_BUBBLE[4]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[4]
+   |-> [rocprofv2] - TCC_TAG_STALL[5]
+   |-> [rocprofv2] - TCC_BUBBLE[5]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[5]
+   |-> [rocprofv2] - TCC_TAG_STALL[6]
+   |-> [rocprofv2] - TCC_BUBBLE[6]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[6]
+   |-> [rocprofv2] - TCC_TAG_STALL[7]
+   |-> [rocprofv2] - TCC_BUBBLE[7]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[7]
+   |-> [rocprofv2] - TCC_TAG_STALL[8]
+   |-> [rocprofv2] - TCC_BUBBLE[8]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[8]
+   |-> [rocprofv2] - TCC_TAG_STALL[9]
+   |-> [rocprofv2] - TCC_BUBBLE[9]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[9]
+   |-> [rocprofv2] - TCC_TAG_STALL[10]
+   |-> [rocprofv2] - TCC_BUBBLE[10]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[10]
+   |-> [rocprofv2] - TCC_TAG_STALL[11]
+   |-> [rocprofv2] - TCC_BUBBLE[11]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[11]
+   |-> [rocprofv2] - TCC_TAG_STALL[12]
+   |-> [rocprofv2] - TCC_BUBBLE[12]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[12]
+   |-> [rocprofv2] - TCC_TAG_STALL[13]
+   |-> [rocprofv2] - TCC_BUBBLE[13]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[13]
+   |-> [rocprofv2] - TCC_TAG_STALL[14]
+   |-> [rocprofv2] - TCC_BUBBLE[14]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[14]
+   |-> [rocprofv2] - TCC_TAG_STALL[15]
+   |-> [rocprofv2] - TCC_BUBBLE[15]
+   |-> [rocprofv2] - TCC_TOO_MANY_EA_WRREQS_STALL[15]
+   |-> [rocprofv2] Enabling Counter Collection
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 915.129 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1093158.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[profiling] Current input file: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/perfmon/timestamps.txt
+   |-> [rocprofv2] =====pass======
+   |-> [rocprofv2] ProblemSize |Bq=500 |Bkv=1 |Tq=200 |Tkv=200 |HeadNum=8 |qkHeadSz=16 |vHeadSz=8
+   |-> [rocprofv2] Average execution time of the multihead_attention operator is 772.701 us
+   |-> [rocprofv2] Results File: "/workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1/results_1093322.csv"
+   |-> [rocprofv2] 
+   |-> [rocprofv2] The output path for the following counters: /workspace/tracy/composable_kernel-new/build/workloads/mha_128/MI300/out/pmc_1
+[roofline] Roofline temporarily disabled in MI300
